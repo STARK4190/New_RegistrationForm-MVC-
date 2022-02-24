@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Registration_FormEntities">
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="Model.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="Country_ID" ColumnName="Country ID" />
+          <ScalarProperty Name="Country_Name" ColumnName="Country Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registrations">
+      <EntityTypeMapping TypeName="Model.Registration">
+        <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="First_Name" ColumnName="First Name" />
+          <ScalarProperty Name="Second_Name" ColumnName="Second Name" />
+          <ScalarProperty Name="Email_ID" ColumnName="Email ID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Profile_Pic" ColumnName="Profile Pic" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="Model.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="State_ID" ColumnName="State ID" />
+          <ScalarProperty Name="State_Name" ColumnName="State Name" />
+          <ScalarProperty Name="CounID" ColumnName="CounID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
