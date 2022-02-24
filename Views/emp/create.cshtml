@@ -1,11 +1,11 @@
 ﻿@model New_RegistrationForm24Feb.Models.Registration
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "create";
 }
 
-<h2>Index</h2>
-@Html.Raw(ViewBag.Msg);
+<h2>create</h2>
+
 
 @using (Html.BeginForm()) 
 {
@@ -56,21 +56,20 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownListFor(model => model.Country, ViewBag.Country1 as SelectList, "--SELECT", new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.State,ViewBag.State1 as SelectList,"--SELECT",new {@class="form-control" } )
+                @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
             </div>
         </div>
 
+        <div class="form-group">
+            @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

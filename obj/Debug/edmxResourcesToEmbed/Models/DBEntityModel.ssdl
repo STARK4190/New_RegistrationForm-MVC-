@@ -1,27 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Registration Form.dbo.Country' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Country">
     <Key>
       <PropertyRef Name="Country ID" />
-      <PropertyRef Name="Country Name" />
     </Key>
     <Property Name="Country ID" Type="int" Nullable="false" />
     <Property Name="Country Name" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Registration Form.dbo.Registration' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Registration">
     <Key>
       <PropertyRef Name="ID" />
-      <PropertyRef Name="First Name" />
-      <PropertyRef Name="Second Name" />
-      <PropertyRef Name="Email ID" />
-      <PropertyRef Name="Password" />
-      <PropertyRef Name="Profile Pic" />
-      <PropertyRef Name="State" />
-      <PropertyRef Name="Country" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="First Name" Type="varchar" MaxLength="50" Nullable="false" />
@@ -32,43 +20,17 @@ warning 6002: The table/view 'Registration Form.dbo.Registration' does not have 
     <Property Name="State" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Country" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'Registration Form.dbo.State' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="State">
     <Key>
       <PropertyRef Name="State ID" />
-      <PropertyRef Name="State Name" />
-      <PropertyRef Name="CounID" />
     </Key>
     <Property Name="State ID" Type="int" Nullable="false" />
     <Property Name="State Name" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="CounID" Type="int" Nullable="false" />
   </EntityType>
   <EntityContainer Name="ModelStoreContainer">
-    <EntitySet Name="Country" EntityType="Self.Country" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Country].[Country ID] AS [Country ID], 
-    [Country].[Country Name] AS [Country Name]
-    FROM [dbo].[Country] AS [Country]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="Registration" EntityType="Self.Registration" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Registration].[ID] AS [ID], 
-    [Registration].[First Name] AS [First Name], 
-    [Registration].[Second Name] AS [Second Name], 
-    [Registration].[Email ID] AS [Email ID], 
-    [Registration].[Password] AS [Password], 
-    [Registration].[Profile Pic] AS [Profile Pic], 
-    [Registration].[State] AS [State], 
-    [Registration].[Country] AS [Country]
-    FROM [dbo].[Registration] AS [Registration]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="State" EntityType="Self.State" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [State].[State ID] AS [State ID], 
-    [State].[State Name] AS [State Name], 
-    [State].[CounID] AS [CounID]
-    FROM [dbo].[State] AS [State]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Registration" EntityType="Self.Registration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

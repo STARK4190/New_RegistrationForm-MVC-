@@ -1,0 +1,39 @@
+﻿@model IEnumerable<New_RegistrationForm24Feb.Models.Registration>
+
+@{
+    ViewBag.Title = "ShowTable";
+}
+
+<h2>ShowTable</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>LAst Name</th>
+        <th>Email ID</th>
+        <th>PAssword</th>
+        <th>Pic  Upload</th>
+        <th>State</th>
+        <th>Country</th>
+    </tr>
+
+    @{
+        foreach (var item in Model)
+        {
+            <tr>@item.ID</tr>
+            <tr>@item.First_Name</tr>
+            <tr>@item.Second_Name</tr>
+            <tr>@item.Email_ID</tr>
+            <tr>@item.Password</tr>
+            <tr>@item.Profile_Pic</tr>
+            <tr>@item.State</tr>
+            <tr>@item.Country</tr>
+        }
+
+    }
+
+</table>

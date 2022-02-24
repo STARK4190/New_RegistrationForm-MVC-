@@ -3,7 +3,6 @@
   <EntityType Name="Country">
     <Key>
       <PropertyRef Name="Country_ID" />
-      <PropertyRef Name="Country_Name" />
     </Key>
     <Property Name="Country_ID" Type="Int32" Nullable="false" />
     <Property Name="Country_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
@@ -11,13 +10,6 @@
   <EntityType Name="Registration">
     <Key>
       <PropertyRef Name="ID" />
-      <PropertyRef Name="First_Name" />
-      <PropertyRef Name="Second_Name" />
-      <PropertyRef Name="Email_ID" />
-      <PropertyRef Name="Password" />
-      <PropertyRef Name="Profile_Pic" />
-      <PropertyRef Name="State" />
-      <PropertyRef Name="Country" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
@@ -31,8 +23,6 @@
   <EntityType Name="State">
     <Key>
       <PropertyRef Name="State_ID" />
-      <PropertyRef Name="State_Name" />
-      <PropertyRef Name="CounID" />
     </Key>
     <Property Name="State_ID" Type="Int32" Nullable="false" />
     <Property Name="State_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
