@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="b7d2a3bfbd8444c2871bace000d4b560" Name="Diagram1" ZoomLevel="140">
         <EntityTypeShape EntityType="Model.Country" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Registration" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Registration" Width="1.5" PointX="2.625" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.State" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
