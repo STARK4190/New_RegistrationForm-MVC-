@@ -4,8 +4,9 @@
     ViewBag.Title = "Show";
 }
 
-<h2>Show</h2>
+<h2>Registration Table</h2>
 
+@Html.Raw(TempData["Message"]) @*show message whether table deletes or not*@
 <p>
     @Html.ActionLink("Create New", "Index")
 </p>
