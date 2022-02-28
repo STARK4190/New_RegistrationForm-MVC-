@@ -34,6 +34,9 @@ namespace New_RegistrationForm24Feb.Models
         [Required]
         public string Profile_Pic { get; set; }
 
+        [Required]
+        public string Gender { get; set; }
+
         public HttpPostedFileBase ImageFile { get; set; }
     }
 }

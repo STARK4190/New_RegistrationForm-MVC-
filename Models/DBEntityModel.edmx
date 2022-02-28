@@ -24,6 +24,7 @@
           <Property Name="Profile Pic" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="State" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Country" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="State">
           <Key>
@@ -61,6 +62,7 @@
           <Property Name="Profile_Pic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="State">
           <Key>
@@ -92,6 +94,7 @@
           <EntitySetMapping Name="Registrations">
             <EntityTypeMapping TypeName="Model.Registration">
               <MappingFragment StoreEntitySet="Registration">
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="First_Name" ColumnName="First Name" />
                 <ScalarProperty Name="Second_Name" ColumnName="Second Name" />

@@ -12,6 +12,7 @@
     <EntitySetMapping Name="Registrations">
       <EntityTypeMapping TypeName="Model.Registration">
         <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="First_Name" ColumnName="First Name" />
           <ScalarProperty Name="Second_Name" ColumnName="Second Name" />

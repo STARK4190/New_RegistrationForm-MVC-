@@ -75,5 +75,27 @@ namespace New_RegistrationForm24Feb.Controllers
             //return View();
         }
 
+
+        public ActionResult Details(int id)     //show details
+        {
+            var Details = db.Registrations.Where(model => model.ID == id).FirstOrDefault();
+            return View(Details);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var Details = db.Registrations.Where(model => model.ID == id).FirstOrDefault();
+            return View(Details);
+        }
+
+
+        [HttpPost]
+        public ActionResult Edit(Registration rs)
+        {
+            db.Entry(rs).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return View();
+        }
+
     }
 }

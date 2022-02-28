@@ -76,8 +76,8 @@ C:\Users\prate\source\repos\New_RegistrationForm24Feb\bin\System.Web.WebPages.Ra
 C:\Users\prate\source\repos\New_RegistrationForm24Feb\bin\Newtonsoft.Json.xml
 C:\Users\prate\source\repos\New_RegistrationForm24Feb\bin\Antlr3.Runtime.pdb
 C:\Users\prate\source\repos\New_RegistrationForm24Feb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\prate\source\repos\New_RegistrationForm24Feb\obj\Debug\New_RegistrationForm24Feb.csproj.AssemblyReference.cache
 C:\Users\prate\source\repos\New_RegistrationForm24Feb\obj\Debug\New_RegistrationForm24Feb.csproj.CoreCompileInputs.cache
 C:\Users\prate\source\repos\New_RegistrationForm24Feb\obj\Debug\New_RegistrationForm24Feb.csproj.CopyComplete
 C:\Users\prate\source\repos\New_RegistrationForm24Feb\obj\Debug\New_RegistrationForm24Feb.dll
 C:\Users\prate\source\repos\New_RegistrationForm24Feb\obj\Debug\New_RegistrationForm24Feb.pdb
+C:\Users\prate\source\repos\New_RegistrationForm24Feb\obj\Debug\New_RegistrationForm24Feb.csproj.AssemblyReference.cache
