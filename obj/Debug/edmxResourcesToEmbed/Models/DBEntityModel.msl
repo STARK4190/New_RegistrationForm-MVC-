@@ -12,6 +12,7 @@
     <EntitySetMapping Name="Registrations">
       <EntityTypeMapping TypeName="Model.Registration">
         <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="Languages" ColumnName="Languages" />
           <ScalarProperty Name="Gender" ColumnName="Gender" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="First_Name" ColumnName="First Name" />
@@ -30,6 +31,24 @@
           <ScalarProperty Name="State_ID" ColumnName="State ID" />
           <ScalarProperty Name="State_Name" ColumnName="State Name" />
           <ScalarProperty Name="CounID" ColumnName="CounID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProgrammingLanguages">
+      <EntityTypeMapping TypeName="Model.ProgrammingLanguage">
+        <MappingFragment StoreEntitySet="ProgrammingLanguage">
+          <ScalarProperty Name="IsThere" ColumnName="IsThere" />
+          <ScalarProperty Name="Programming_Name" ColumnName="Programming Name" />
+          <ScalarProperty Name="ProgID" ColumnName="ProgID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registered_Employee">
+      <EntityTypeMapping TypeName="Model.Registered_Employee">
+        <MappingFragment StoreEntitySet="Registered_Employee">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

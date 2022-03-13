@@ -3,8 +3,8 @@
 @{
     ViewBag.Title = "Show";
 }
-
-<h2>Registration Table</h2>
+                                            @*HOME cntrl Show values table*@
+<h3>Trainee Details</h3>
 
 @Html.Raw(TempData["Message"]) @*show message whether table deletes or not*@
 <p>
@@ -36,8 +36,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Gender)
         </th>
-
-
+        
         <th></th>
     </tr>
 
@@ -68,11 +67,6 @@
         @Html.DisplayFor(modelItem => item.Gender)
     </th>
 
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-    </td>
 </tr>
 }
 

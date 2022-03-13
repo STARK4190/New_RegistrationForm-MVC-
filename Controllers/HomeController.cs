@@ -4,23 +4,30 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
-
+using System.Web.Mvc; 
+using Newtonsoft.Json;
 namespace New_RegistrationForm24Feb.Controllers
 {
-
+    //  [HandleError] //controller level 
     public class HomeController : Controller
     {
         Registration_FormEntities db = new Registration_FormEntities();
 
-        public ActionResult Index() //insert
+        //[HandleError(View ="Error2")] //action level handle error with other Error2 attach
+
+        public ActionResult Index() //insert values registration 
         {
+            //throw new Exception();      //route to error.cshtml page(default)
+
             List<State> state= db.States.ToList();
             ViewBag.State1 = new SelectList(state, "State_Name", "State_Name"); 
 
             List<Country> Countr = db.Countries.ToList();
             ViewBag.Country1 = new SelectList(Countr, "Country_Name", "Country_Name");
 
+            List<ProgrammingLanguage> Lang = db.ProgrammingLanguages.ToList();
+            ViewBag.Lang1 = new SelectList(Lang, "Programming_Name", "Programming_Name");
+           
             return View();
         }
 
@@ -49,7 +56,11 @@ namespace New_RegistrationForm24Feb.Controllers
             ViewBag.State1 = new SelectList(state, "State_Name", "State_Name"); 
 
             List<Country> Countr = db.Countries.ToList();
-            ViewBag.Country1 = new SelectList(Countr, "Country_Name", "Country_Name"); 
+            ViewBag.Country1 = new SelectList(Countr, "Country_Name", "Country_Name");
+            
+            List<ProgrammingLanguage> Lang = db.ProgrammingLanguages.ToList();
+            ViewBag.Lang1 = new SelectList(Lang, "Programming_Name", "Programming_Name");
+
             return View();
         }
             
@@ -75,7 +86,7 @@ namespace New_RegistrationForm24Feb.Controllers
             //return View();
         }
 
-
+        
         public ActionResult Details(int id)     //show details
         {
             var Details = db.Registrations.Where(model => model.ID == id).FirstOrDefault();
@@ -97,5 +108,14 @@ namespace New_RegistrationForm24Feb.Controllers
             return View();
         }
 
+        public ActionResult About()
+        {
+            return View();
+        }
+        [Authorize]     //here 
+        public ActionResult Contact()
+        {
+            return View();
+        }
     }
 }

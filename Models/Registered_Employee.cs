@@ -11,27 +11,16 @@ namespace New_RegistrationForm24Feb.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
-    using System.Web;
 
-    public partial class Registration
+    public partial class Registered_Employee
     {
         public int ID { get; set; }
-        public string First_Name { get; set; }
-        public string Second_Name { get; set; }
-        public string Email_ID { get; set; }
+
+        [Required(ErrorMessage ="Enter Username")]
+        public string Username { get; set; }
+
+        [Required(ErrorMessage = "Enter Password")]
         public string Password { get; set; }
-
-        [DisplayName("Choose Image")]
-        [Required]
-        public string Profile_Pic { get; set; }
-        public string State { get; set; }
-        public string Country { get; set; }
-        public string Gender { get; set; }
-        public string Languages { get; set; }
-        public HttpPostedFileBase ImageFile { get; set; }
-
-
     }
 }

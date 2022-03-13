@@ -28,5 +28,7 @@ namespace New_RegistrationForm24Feb.Models
         public virtual DbSet<Country> Countries { get; set; }
         public virtual DbSet<Registration> Registrations { get; set; }
         public virtual DbSet<State> States { get; set; }
+        public virtual DbSet<ProgrammingLanguage> ProgrammingLanguages { get; set; }
+        public virtual DbSet<Registered_Employee> Registered_Employee { get; set; }
     }
 }

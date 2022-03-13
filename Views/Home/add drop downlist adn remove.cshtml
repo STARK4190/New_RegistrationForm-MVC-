@@ -1,0 +1,80 @@
+//drop down code add code
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<input type="button" value="Add" onclick="AddDROPDOWN()" id="ADD" class="btn-success " style="margin-bottom:15px" />
+<p id="warning"></p>
+<div id="container" style="width:500px; ">
+
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script>
+    var counter = 0;
+    function existed(val)
+    {
+
+        for (var i = 0; i < counter; i++)
+        {
+            if ($('#Select' + i).val() == "--select--")
+            {
+                return true;
+            }
+
+            else if ($('#Select' + i).val() == val) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function AddDROPDOWN()
+    {
+        var values = ["--select--","chetan", "Abhi", "Partek", "Akash"];
+
+        var select = document.createElement("select");
+        select.name = "Nam";
+        select.className = "form-control";
+        select.style = "float: left; margin-bottom:10px;";
+
+        for (var val of values) {
+            if (existed(val))
+            {
+                var option = document.createElement("option");
+                option.value = val;
+                option.text = val;
+                select.appendChild(option);
+            }
+        }
+
+        var button = $('<input />').attr({ type: 'button', value: 'Remove', style: "float:left; margin-bottom:10px;"});
+        button.click(function () {
+            $(this).parent().remove();
+        });
+
+
+        if (counter == 0 || $('#Select' + (counter - 1)).val() != "--select--")
+        {
+            var div = $('<div>').attr({ id: counter });
+            select.id = "Select" + counter;
+            counter++;
+
+            div.append(select);
+            div.append(button);
+            $("#container").append(div);
+            $("#warning").text("");
+        }
+
+        else
+        {
+            $("#warning").text("All field value must be selected").attr({ style:"color:red;" });
+        }
+    }
+
+
+
+</script>

@@ -7,6 +7,22 @@
     <Property Name="Country ID" Type="int" Nullable="false" />
     <Property Name="Country Name" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="ProgrammingLanguage">
+    <Key>
+      <PropertyRef Name="ProgID" />
+    </Key>
+    <Property Name="ProgID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Programming Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsThere" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Registered_Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="Registration">
     <Key>
       <PropertyRef Name="ID" />
@@ -20,6 +36,7 @@
     <Property Name="State" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Country" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Gender" Type="varchar" MaxLength="50" />
+    <Property Name="Languages" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="State">
     <Key>
@@ -31,6 +48,8 @@
   </EntityType>
   <EntityContainer Name="ModelStoreContainer">
     <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProgrammingLanguage" EntityType="Self.ProgrammingLanguage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Registered_Employee" EntityType="Self.Registered_Employee" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Registration" EntityType="Self.Registration" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
