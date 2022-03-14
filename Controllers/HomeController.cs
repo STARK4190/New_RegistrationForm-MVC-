@@ -73,7 +73,7 @@ namespace New_RegistrationForm24Feb.Controllers
         public ActionResult Delete(int id)  //returns the row u want to del
         {
             var RegIdRow = db.Registrations.Where(model=>model.ID==id).FirstOrDefault();
-            return View(RegIdRow);
+            return View(RegIdRow);//add comment
         }
 
         [HttpPost]
